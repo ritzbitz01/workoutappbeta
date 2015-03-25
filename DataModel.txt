@@ -1,0 +1,16 @@
+Data Model
+
+User
+	- userId
+		- firstname
+		- lastname
+		- email
+		- password
+		- workouts (List)
+			- type
+			- Description
+			- Exercise (List)
+				- Name
+				- Weight
+				- Num Reps
+				- Num Sets
