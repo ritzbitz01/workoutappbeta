@@ -1,5 +1,16 @@
 Data Model
 
+WorkoutTemplate
+	- workoutId
+		- Name
+		- Description
+		- Type
+		- Exercises
+			- Name
+			- Weight (Default)
+			- Num Reps (Default)
+			- Num Sets (Default)
+
 User
 	- userId
 		- firstname
