@@ -1,0 +1,40 @@
+<section class="register">
+  <form name="myform"
+    ng-submit="createworkout()"
+    novalidate>
+
+    <h1>Create Your Workout</h1>
+    
+    <p class="error formerror" ng-show="message">{{ message }}</p>
+
+    <input type="description" name="description" placeholder="Description"
+      ng-model="workout.description" ng-required="true">
+    <p class="error validationerror"
+      ng-show="myform.description.$invalid && myform.description.$touched">
+      Description is required</p>
+
+  <h2>Add Exercise</h2>
+  <form class="formgroup addmeeting cf"
+    name="addexerciseform"
+    ng-submit="addExercise()"
+    novalidate>
+    <div class="inputwrapper">
+      <input type="text" name="exercisename" 
+      placeholder="Exercise name" 
+        ng-model="exercisename" ng-required="true">
+    </div>
+    
+    <button type="submit" class="btn"
+      ng-disabled="addexerciseform.$invalid">+</button>
+    <!--div>
+      <select name="routineTypeSelect" class="workoutTypeSelect" ng-model="workoutTypeSelected"
+        ng-options="opt as opt.label for opt in options">
+      </select>
+    </div-->
+  </form>
+
+    <button type="submit" class="btn"
+      ng-disabled="myform.$invalid">Register</button>
+    
+  </form>
+</section>

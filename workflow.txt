@@ -1,0 +1,14 @@
+1. Open App
+2. Login Screen
+3. Register new user
+4. Show list of workouts
+
+5a. Create a new workout
+	1a. Create a custom workout
+		2. Enter in name, type, and description
+		3. Add exercises if applicable (none to many)
+	1b. Select from existing workout template 
+
+5b. Select an existing workout
+6. Show the workout and the list of isntances
+

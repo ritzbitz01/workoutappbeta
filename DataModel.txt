@@ -25,3 +25,9 @@ User
 				- Weight
 				- Num Reps
 				- Num Sets
+			- Instances
+				- Date
+				- Exercise (List)
+					- Weight (Instance)
+					- Num Reps (Instance)
+					- Num Sets (Instance)

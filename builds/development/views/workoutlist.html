@@ -1,0 +1,44 @@
+<div class="meetings cf">
+
+<h1>{{whichworkout}}</h1>
+  <form class="formgroup addworkoutinstance cf"
+    name="myform"
+    ng-submit="addInstance()"
+    novalidate>
+    
+    <button type="submit" class="addinstancebutton"
+      ng-disabled="myform.$invalid">Add Workout Instance</button>
+    
+  </form>
+  <br>
+
+  <h2>Workout Instances</h2>
+  <div class="meeting" id="workoutlistdiv"><!-- ng-repeat="(key, workout) in workouts"-->
+    <ul class="artistlist" id="workout-inline-block"><!-- ng-show="query"-->
+        <li ng-animate="'animate'" class="artist cf" ng-repeat="(key, workoutinstance) in workoutinstances | filter : query | orderBy : artistOrder:direction">
+          <div class="meeting">
+            <button class="btn btn-delete tooltip"
+              ng-click="deleteWorkout(key)">
+            <span>Delete this workout</span></button>
+
+            <!--a class="btn btn-list tooltip" 
+              ng-href="#/checkins/{{currentUser.regUser}}/{{key}}/checkinsList">
+              <span>View workout details</span></a-->
+
+            <a class="btn btn-list tooltip" 
+              ng-href="#/workouts/{{currentUser.regUser}}/{{key}}/workoutDetails">
+              <span>View workout details</span></a>
+
+            <a class="btn btn-checkin tooltip" 
+              ng-href="#/checkins/{{currentUser.regUser}}/{{key}}">
+              <span>Go to check-in URL</span></a>
+
+            <a class="btn btn-checkin tooltip" 
+              ng-href="#/workouts/{{currentUser.regUser}}/{{key}}">
+              <span>New Workout Instance</span></a>
+
+            <span class="text">{{workout.name}}</span>
+          </div>
+        </li>
+    </ul>
+</div><!-- workouts cf -->

@@ -265,6 +265,34 @@ p.error {
   padding: 5px 5px 5px 50px;
 }
 
+.addinstancebutton {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 140%;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: #C61C6F;
+    color: #FCF4DC;
+    background-color: #14566A;
+    background-size: 18px 18px;
+    min-width: 28px;
+    min-height: 28px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 2px solid white;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
 
 /*buttons*/
 
@@ -617,3 +645,112 @@ nav ul li a:hover {
    appearance: none;
     background: url(downtriangle.jpg) 96% / 15% no-repeat #eee;
 } 
+
+/* Artist List Styles */
+
+.artistlist {
+  background: #EEE8D5;
+  width: 50%;
+  min-width: 290px;
+  max-width:350px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 0 0 20px 20px;
+  opacity: .95;
+  z-index: 10;
+}
+
+.artistlist ul {
+  margin: 0;
+  padding: 0;
+  background: #FDF6E3;
+}
+
+.artistlist li {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  border-bottom: 1px dotted black;
+  opacity: .9;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.artistlist a {
+  display: block;
+  text-decoration: none;
+}
+
+.artistlist li:hover {
+  background: #FDF6E3;
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.artist img {
+  display: block;
+  float: left;
+  width: 60px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.artist info {
+  display: block;
+  float: left;
+  padding-left: 120px !important;
+}
+
+.artist:last-child {
+  border-bottom:none;
+}
+
+.artistinfo {
+  font-size: 1.1em;
+  line-height: 160%;
+  background: #EEE8D5;
+  color: #0F4150;
+  width: 90%;
+  min-width: 320px;
+  max-width: 620px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.artistinfo h1{
+  font-size: 1.8em;
+  margin-bottom: 0;
+}
+
+.artistinfo img {
+  width: 40%;
+  max-width: 130px;
+  border-radius: 20px;
+}
+
+.artist.ng-enter.ng-enter-active,
+.artist.ng-leave {
+  opacity: 1;
+  height: 80px;
+  overflow: hidden;
+}
+
+.artist.ng-leave.ng-leave-active,
+.artist.ng-enter {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.artistinfo .btn {
+
+}

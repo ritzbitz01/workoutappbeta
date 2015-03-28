@@ -34,8 +34,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
       controller:  'CheckInsController'
     }).
     when('/workouts/:uId/:mId/workoutDetails', {
-      templateUrl: 'views/checkinslist.html',
-      controller:  'CheckInsController'
+      templateUrl: 'views/workoutlist.html',
+      controller:  'WorkoutInstancesController'
     }).
     when('/meetings', {
       templateUrl: 'views/meetings.html',
