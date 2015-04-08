@@ -1,5 +1,5 @@
-myApp.controller('WorkoutDetailsController', function($scope, 
-  $rootScope, $firebase, $routeParams, 
+myApp.controller('WorkoutDetailsController', function($scope,
+  $rootScope, $firebase, $routeParams,
   $location, Authentication, CountWorkouts, FIREBASE_URL) {
 
   $scope.whichworkout = $routeParams.mId;
@@ -9,8 +9,12 @@ myApp.controller('WorkoutDetailsController', function($scope,
   $scope.recordId='';
   $scope.query='';
 
+  $scope.$watch( function () { return $location.path(); }, function (path) {
+    $scope.path = path;
+  });
+
   var ref = new Firebase(FIREBASE_URL + "/users/" +
-    $scope.whichuser + "/workouts/" + 
+    $scope.whichuser + "/workouts/" +
     $scope.whichworkout + '/checkins');
 
   var checkinsList = $firebase(ref).$asArray();

@@ -2,7 +2,7 @@ myApp.controller('WorkoutsController',
   function($scope, $rootScope, $firebase, $location,
     CountWorkouts, FIREBASE_URL) {
 
-  var ref = new Firebase(FIREBASE_URL + '/users/' + 
+  var ref = new Firebase(FIREBASE_URL + '/users/' +
     $rootScope.currentUser.$id + '/workouts');
 
   var workoutsInfo = $firebase(ref);

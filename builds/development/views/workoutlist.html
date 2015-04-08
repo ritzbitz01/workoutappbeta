@@ -5,6 +5,8 @@
     name="myform"
     ng-submit="addInstance()"
     novalidate>
+
+    <button go-click="/workouts/{{currentUser.regUser}}/{{whichworkout}}/newInstance">Click me!</button>
     
     <button type="submit" class="addinstancebutton"
       ng-disabled="myform.$invalid">Add Workout Instance</button>
