@@ -1,5 +1,5 @@
 myApp.controller('WorkoutsController',
-  function($scope, $rootScope, $firebase,
+  function($scope, $rootScope, $firebase, $location,
     CountWorkouts, FIREBASE_URL) {
 
   var ref = new Firebase(FIREBASE_URL + '/users/' + 
@@ -22,6 +22,9 @@ myApp.controller('WorkoutsController',
     $scope.workouts = data;
   }); //make sure workouts data is loaded
 
+  $scope.createWorkout = function() {
+    $location.path('/workouts/createWorkout');
+  };
 
   $scope.addWorkout = function() {
     workoutsInfo.$push({

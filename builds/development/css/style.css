@@ -585,6 +585,10 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+.meeting .workoutname {
+  font-size: 150%;
+}
+
 .tooltip {
   position: relative;
   opacity: 100;

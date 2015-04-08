@@ -3,7 +3,7 @@
   <h1>Add Workout</h1>
   <form class="formgroup addmeeting cf"
     name="myform"
-    ng-submit="addWorkout()"
+    ng-submit="createWorkout()"
     novalidate>
     <div class="inputwrapper">
       <input type="text" name="workoutname" 
@@ -49,8 +49,10 @@
   <h1>Your workouts</h1>
   <div class="meeting" id="workoutlistdiv"><!-- ng-repeat="(key, workout) in workouts"-->
     <ul class="artistlist" id="workout-inline-block"><!-- ng-show="query"-->
-        <li ng-animate="'animate'" class="artist cf" ng-repeat="(key, workout) in workouts | filter : query | orderBy : artistOrder:direction">
+        <li ng-animate="'animate'" ng-repeat="(key, workout) in workouts | filter : query | orderBy : artistOrder:direction">
           <div class="meeting">
+            <span class="workoutname">{{workout.name}}</span>
+            <div class="buttonlist">
             <button class="btn btn-delete tooltip"
               ng-click="deleteWorkout(key)">
             <span>Delete this workout</span></button>
@@ -70,8 +72,8 @@
             <a class="btn btn-checkin tooltip" 
               ng-href="#/workouts/{{currentUser.regUser}}/{{key}}">
               <span>New Workout Instance</span></a>
-
-            <span class="text">{{workout.name}}</span>
+            </div>
+           
           </div>
         </li>
     </ul>
